@@ -1,0 +1,836 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DE601DB2-0EF3-4BB1-9E09-6F2F63061020}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyDeTai</RootNamespace>
+    <AssemblyName>QuanLyDeTai</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.1.5.3">
+      <HintPath>..\bunifu\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\..\Desktop\New folder (2)\BunifuCrack\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
+      <HintPath>..\..\New folder (2)\BunifuCrack\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition">
+      <HintPath>..\..\..\..\Desktop\New folder (2)\BunifuCrack\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\..\..\Desktop\New folder (2)\BunifuCrack\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>D:\HCI\TTCSDL-Nhom3-main (1)\TTCSDL-Nhom3-main\ttcsdl-trantung-pkhcn\bunifu\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel">
+      <HintPath>..\..\New folder (2)\BunifuCrack\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\New folder (2)\BunifuCrack\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
+      <HintPath>..\..\..\..\Desktop\New folder (2)\BunifuCrack\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
+      <HintPath>..\bunifu\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>..\..\New folder (2)\BunifuCrack\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar">
+      <HintPath>..\..\..\..\Desktop\New folder (2)\BunifuCrack\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>..\..\..\..\Desktop\New folder (2)\BunifuCrack\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip">
+      <HintPath>..\..\..\New folder (2)\BunifuCrack\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition">
+      <HintPath>..\..\New folder (2)\BunifuCrack\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.4\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.Charts.WinForms, Version=1.0.4.0, Culture=neutral, PublicKeyToken=70866663edbc6595, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.Charts.WinForms.1.0.4\lib\net40\Guna.Charts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.3.9, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.9\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1400.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1400.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.6.0.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BoMon1\BoMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoMon1\BoMon.Designer.cs">
+      <DependentUpon>BoMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoMon1\QLDT\dstvDETAI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoMon1\QLDT\dstvDETAI.Designer.cs">
+      <DependentUpon>dstvDETAI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoMon1\QLDT\DT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoMon1\QLDT\DT.Designer.cs">
+      <DependentUpon>DT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoMon1\QLGV\dsdt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoMon1\QLGV\dsdt.Designer.cs">
+      <DependentUpon>dsdt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoMon1\QLGV\GV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoMon1\QLGV\GV.Designer.cs">
+      <DependentUpon>GV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoMon1\QLGV\infor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoMon1\QLGV\infor.Designer.cs">
+      <DependentUpon>infor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoMon1\Setting\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoMon1\Setting\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectDB\Connect.cs" />
+    <Compile Include="DaiDoi\AddResearch\AddReseach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaiDoi\AddResearch\AddReseach.Designer.cs">
+      <DependentUpon>AddReseach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DaiDoi\DaiDoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaiDoi\DaiDoi.Designer.cs">
+      <DependentUpon>DaiDoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DaiDoi\Infor\Infor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaiDoi\Infor\Infor.Designer.cs">
+      <DependentUpon>Infor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DaiDoi\ListResearch\dstvDETAI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaiDoi\ListResearch\dstvDETAI.Designer.cs">
+      <DependentUpon>dstvDETAI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DaiDoi\ListResearch\ListResearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaiDoi\ListResearch\ListResearch.Designer.cs">
+      <DependentUpon>ListResearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DaiDoi\ListResearch\XuatDK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaiDoi\ListResearch\XuatDK.Designer.cs">
+      <DependentUpon>XuatDK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DaiDoi\QLHV\dsdt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaiDoi\QLHV\dsdt.Designer.cs">
+      <DependentUpon>dsdt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DaiDoi\QLHV\HV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaiDoi\QLHV\HV.Designer.cs">
+      <DependentUpon>HV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DaiDoi\QLHV\infor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaiDoi\QLHV\infor.Designer.cs">
+      <DependentUpon>infor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DaiDoi\Setting\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaiDoi\Setting\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Khoa\Formlol.cs" />
+    <Compile Include="Khoa\Formlol.Designer.cs">
+      <DependentUpon>Formlol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Khoa\HDNT\HDNT.cs" />
+    <Compile Include="Khoa\HDNT\HDNT.Designer.cs">
+      <DependentUpon>HDNT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Khoa\HDNT\ListDT.cs" />
+    <Compile Include="Khoa\HDNT\ListDT.Designer.cs">
+      <DependentUpon>ListDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Khoa\HDNT\modal.cs" />
+    <Compile Include="Khoa\HDNT\modal.Designer.cs">
+      <DependentUpon>modal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Khoa\QLDT\QuanLyDeTai.cs" />
+    <Compile Include="Khoa\QLDT\QuanLyDeTai.Designer.cs">
+      <DependentUpon>QuanLyDeTai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Khoa\QLDT\ThongTinTV.cs" />
+    <Compile Include="Khoa\QLDT\ThongTinTV.Designer.cs">
+      <DependentUpon>ThongTinTV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Khoa\QLGV\DSDTG.cs" />
+    <Compile Include="Khoa\QLGV\DSDTG.Designer.cs">
+      <DependentUpon>DSDTG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Khoa\QLGV\QuanLyGV.cs" />
+    <Compile Include="Khoa\QLGV\QuanLyGV.Designer.cs">
+      <DependentUpon>QuanLyGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Khoa\Setting\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Khoa\Setting\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Khoa\TK\ThongKe.cs" />
+    <Compile Include="Khoa\TK\ThongKe.Designer.cs">
+      <DependentUpon>ThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PKHCN\HDNT\HDNT.cs" />
+    <Compile Include="PKHCN\HDNT\HDNT.Designer.cs">
+      <DependentUpon>HDNT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PKHCN\HDNT\ListDT.cs" />
+    <Compile Include="PKHCN\HDNT\ListDT.Designer.cs">
+      <DependentUpon>ListDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PKHCN\HDNT\modal.cs" />
+    <Compile Include="PKHCN\HDNT\modal.Designer.cs">
+      <DependentUpon>modal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PKHCN\KTXP\KHENTHUONG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PKHCN\KTXP\KHENTHUONG.Designer.cs">
+      <DependentUpon>KHENTHUONG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PKHCN\KTXP\ThemKhenThuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PKHCN\KTXP\ThemKhenThuong.Designer.cs">
+      <DependentUpon>ThemKhenThuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PKHCN\KTXP\ThemXuPhat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PKHCN\KTXP\ThemXuPhat.Designer.cs">
+      <DependentUpon>ThemXuPhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PKHCN\KTXP\XuPhat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PKHCN\KTXP\XuPhat.Designer.cs">
+      <DependentUpon>XuPhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PKHCN\PKHCN.cs" />
+    <Compile Include="PKHCN\PKHCN.Designer.cs">
+      <DependentUpon>PKHCN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PKHCN\QLK\DSK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PKHCN\QLK\DSK.Designer.cs">
+      <DependentUpon>DSK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PKHCN\QLK\modal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PKHCN\QLK\modal.Designer.cs">
+      <DependentUpon>modal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PKHCN\QLTK\QLTK.cs" />
+    <Compile Include="PKHCN\QLTK\QLTK.Designer.cs">
+      <DependentUpon>QLTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PKHCN\QuanLyDT\modal.cs" />
+    <Compile Include="PKHCN\QuanLyDT\modal.Designer.cs">
+      <DependentUpon>modal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PKHCN\QuanLyDT\QLDT1.cs" />
+    <Compile Include="PKHCN\QuanLyDT\QLDT1.Designer.cs">
+      <DependentUpon>QLDT1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PKHCN\QuanLyDT\TVTG.cs" />
+    <Compile Include="PKHCN\QuanLyDT\TVTG.Designer.cs">
+      <DependentUpon>TVTG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PKHCN\QuanLyKinhPhi\Baocao.cs" />
+    <Compile Include="PKHCN\QuanLyKinhPhi\Baocao.Designer.cs">
+      <DependentUpon>Baocao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PKHCN\QuanLyKinhPhi\QLKP.cs" />
+    <Compile Include="PKHCN\QuanLyKinhPhi\QLKP.Designer.cs">
+      <DependentUpon>QLKP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLDTDataSet.cs">
+      <DependentUpon>QLDTDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLDTDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDTDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLDTDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDTDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLDTDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDTDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLDTDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDTDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLDTDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDTDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TieuDoan\QLDT\DT.cs" />
+    <Compile Include="TieuDoan\QLDT\DT.Designer.cs">
+      <DependentUpon>DT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TieuDoan\QLDT\hvdt.cs" />
+    <Compile Include="TieuDoan\QLDT\hvdt.Designer.cs">
+      <DependentUpon>hvdt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TieuDoan\QLHV\dsdt.cs" />
+    <Compile Include="TieuDoan\QLHV\dsdt.Designer.cs">
+      <DependentUpon>dsdt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TieuDoan\QLHV\HV.cs" />
+    <Compile Include="TieuDoan\QLHV\HV.Designer.cs">
+      <DependentUpon>HV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TieuDoan\Setting\ChangePassword.cs" />
+    <Compile Include="TieuDoan\Setting\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TieuDoan\ThongKe\THONGKE.cs" />
+    <Compile Include="TieuDoan\ThongKe\THONGKE.Designer.cs">
+      <DependentUpon>THONGKE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TieuDoan\ThongKe\XuPhat.cs" />
+    <Compile Include="TieuDoan\ThongKe\XuPhat.Designer.cs">
+      <DependentUpon>XuPhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TieuDoan\TieuDoan.cs" />
+    <Compile Include="TieuDoan\TieuDoan.Designer.cs">
+      <DependentUpon>TieuDoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\AddResearch\AddReseach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\AddResearch\AddReseach.Designer.cs">
+      <DependentUpon>AddReseach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Infor\Infor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Infor\Infor.Designer.cs">
+      <DependentUpon>Infor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\ListResearch\dstvDETAI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\ListResearch\dstvDETAI.Designer.cs">
+      <DependentUpon>dstvDETAI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\ListResearch\ListResearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\ListResearch\ListResearch.Designer.cs">
+      <DependentUpon>ListResearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\ListResearch\XuatDK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\ListResearch\XuatDK.Designer.cs">
+      <DependentUpon>XuatDK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Setting\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Setting\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BoMon1\BoMon.resx">
+      <DependentUpon>BoMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoMon1\QLDT\dstvDETAI.resx">
+      <DependentUpon>dstvDETAI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoMon1\QLDT\DT.resx">
+      <DependentUpon>DT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoMon1\QLGV\dsdt.resx">
+      <DependentUpon>dsdt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoMon1\QLGV\GV.resx">
+      <DependentUpon>GV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoMon1\QLGV\infor.resx">
+      <DependentUpon>infor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoMon1\Setting\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaiDoi\AddResearch\AddReseach.resx">
+      <DependentUpon>AddReseach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaiDoi\DaiDoi.resx">
+      <DependentUpon>DaiDoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaiDoi\Infor\Infor.resx">
+      <DependentUpon>Infor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaiDoi\ListResearch\dstvDETAI.resx">
+      <DependentUpon>dstvDETAI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaiDoi\ListResearch\ListResearch.resx">
+      <DependentUpon>ListResearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaiDoi\ListResearch\XuatDK.resx">
+      <DependentUpon>XuatDK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaiDoi\QLHV\dsdt.resx">
+      <DependentUpon>dsdt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaiDoi\QLHV\HV.resx">
+      <DependentUpon>HV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaiDoi\QLHV\infor.resx">
+      <DependentUpon>infor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaiDoi\Setting\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form.rdlc" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khoa\Formlol.resx">
+      <DependentUpon>Formlol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khoa\HDNT\HDNT.resx">
+      <DependentUpon>HDNT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khoa\HDNT\ListDT.resx">
+      <DependentUpon>ListDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khoa\HDNT\modal.resx">
+      <DependentUpon>modal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khoa\QLDT\QuanLyDeTai.resx">
+      <DependentUpon>QuanLyDeTai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khoa\QLDT\ThongTinTV.resx">
+      <DependentUpon>ThongTinTV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khoa\QLGV\DSDTG.resx">
+      <DependentUpon>DSDTG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khoa\QLGV\QuanLyGV.resx">
+      <DependentUpon>QuanLyGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khoa\Setting\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khoa\TK\ThongKe.resx">
+      <DependentUpon>ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PKHCN\HDNT\HDNT.resx">
+      <DependentUpon>HDNT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PKHCN\HDNT\ListDT.resx">
+      <DependentUpon>ListDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PKHCN\HDNT\modal.resx">
+      <DependentUpon>modal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PKHCN\KTXP\KHENTHUONG.resx">
+      <DependentUpon>KHENTHUONG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PKHCN\KTXP\ThemKhenThuong.resx">
+      <DependentUpon>ThemKhenThuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PKHCN\KTXP\ThemXuPhat.resx">
+      <DependentUpon>ThemXuPhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PKHCN\KTXP\XuPhat.resx">
+      <DependentUpon>XuPhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PKHCN\PKHCN.resx">
+      <DependentUpon>PKHCN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PKHCN\QLK\DSK.resx">
+      <DependentUpon>DSK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PKHCN\QLK\modal.resx">
+      <DependentUpon>modal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PKHCN\QLTK\QLTK.resx">
+      <DependentUpon>QLTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PKHCN\QuanLyDT\modal.resx">
+      <DependentUpon>modal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PKHCN\QuanLyDT\QLDT1.resx">
+      <DependentUpon>QLDT1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PKHCN\QuanLyDT\TVTG.resx">
+      <DependentUpon>TVTG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PKHCN\QuanLyKinhPhi\Baocao.resx">
+      <DependentUpon>Baocao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PKHCN\QuanLyKinhPhi\QLKP.resx">
+      <DependentUpon>QLKP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TieuDoan\QLDT\DT.resx">
+      <DependentUpon>DT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TieuDoan\QLDT\hvdt.resx">
+      <DependentUpon>hvdt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TieuDoan\QLHV\dsdt.resx">
+      <DependentUpon>dsdt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TieuDoan\QLHV\HV.resx">
+      <DependentUpon>HV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TieuDoan\Setting\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TieuDoan\ThongKe\THONGKE.resx">
+      <DependentUpon>THONGKE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TieuDoan\ThongKe\XuPhat.resx">
+      <DependentUpon>XuPhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TieuDoan\TieuDoan.resx">
+      <DependentUpon>TieuDoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\AddResearch\AddReseach.resx">
+      <DependentUpon>AddReseach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Infor\Infor.resx">
+      <DependentUpon>Infor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\ListResearch\dstvDETAI.resx">
+      <DependentUpon>dstvDETAI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\ListResearch\ListResearch.resx">
+      <DependentUpon>ListResearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\ListResearch\Xuat.rdlc" />
+    <EmbeddedResource Include="User\ListResearch\XuatDK.resx">
+      <DependentUpon>XuatDK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Setting\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\User.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DaiDoi\ListResearch\Xuat.rdlc" />
+    <None Include="packages.config" />
+    <None Include="PKHCN\QuanLyKinhPhi\KinhPhiKhoa.rdlc" />
+    <None Include="PKHCN\QuanLyKinhPhi\Report1.rdlc" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QLDTDataSet.xsc">
+      <DependentUpon>QLDTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLDTDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDTDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDTDataSet.xss">
+      <DependentUpon>QLDTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLDTDataSet1.xsc">
+      <DependentUpon>QLDTDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLDTDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDTDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDTDataSet1.xss">
+      <DependentUpon>QLDTDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLDTDataSet2.xsc">
+      <DependentUpon>QLDTDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QLDTDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDTDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDTDataSet2.xss">
+      <DependentUpon>QLDTDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QLDTDataSet3.xsc">
+      <DependentUpon>QLDTDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QLDTDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDTDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDTDataSet3.xss">
+      <DependentUpon>QLDTDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QLDTDataSet4.xsc">
+      <DependentUpon>QLDTDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QLDTDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDTDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDTDataSet4.xss">
+      <DependentUpon>QLDTDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải xuống.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2022-04-05 125836.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foody-mobile-19990214_17903858976-899-636413428541565084.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\this-is-a-graphic-rpassword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\950-9502664_png-file-svg-password-icon-transparent-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon-black-silhouette-isolated-on-white-vector-20390378.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
